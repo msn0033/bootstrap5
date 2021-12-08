@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: cursive;
+}
+
+/*** utilite ***/
+section {
+  overflow: hidden;
+}
+
+.bg-section {
+  background-color: #f6f9fe;
+}
+
+/***  ***/
+.title-before {
+  background-color: #e7f1fd;
+}
+
+/*** Navbar ***/
+.navbar-light .navbar-nav .nav-link {
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navbar-light .navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 3px;
+  background-color: blue;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link:hover {
+  color: blue;
+}
+
+.navbar-light .navbar-nav .nav-link.active::before, .navbar-light .navbar-nav .nav-link:hover::before {
+  width: 100%;
+}
+
+.navbar-light .navbar-toggler:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/***Header ***/
+#header {
+  height: 75vh;
+  background: url(../img/hero-bg.jpg) center center/cover;
+}
+
+#header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/*** modal ***/
+#exampleModal object {
+  height: 60vh;
+  width: 100%;
+}
+
+#exampleModal.fade .modal-dialog {
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+#exampleModal.show .modal-dialog {
+  -webkit-transform: none;
+          transform: none;
+}
+
+/*** AboutDiv ***/
+.about .SizeBgAbout {
+  width: 6rem;
+  height: 2rem;
+}
+
+/*** icon-container ***/
+.icon-container {
+  width: 50px;
+  height: 50px;
+}
+
+/*** progress ***/
+.progress-bar {
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+/*** icon-box ***/
+.icon-box .box-overlay {
+  inset: 0;
+}
+
+.icon-box > * {
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.icon-box:hover .box-overlay {
+  top: 0 !important;
+}
+
+.icon-box:hover > * {
+  color: #fff !important;
+}
+
+/*** slider Div ***/
+.slider-Div {
+  background: url(../img/testimonials-bg.jpg) center center/cover;
+}
+
+.slider-Div::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(33, 39, 43, 0.8);
+}
+
+.slider-Div #carouselExampleCaptions {
+  height: 400px;
+}
+
+.slider-Div .carousel-item {
+  padding-top: 5%;
+}
+
+.slider-Div .carousel-item img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+
+/*** portfolio***/
+.filterd-items > a {
+  height: 250px;
+}
+
+.filterd-items > a > img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.filterd-items > a.hidden {
+  display: none;
+}
+
+.filterd-items > a.active {
+  display: block;
+  -webkit-animation: .7s shown ease-in-out;
+          animation: .7s shown ease-in-out;
+}
+
+/*** contact***/
+#contact i {
+  width: 70px;
+  height: 70px;
+  border: 2px dashed;
+  line-height: 70px;
+}
+
+/*** footer***/
+.footer-list li {
+  position: relative;
+}
+
+.footer-list li::before {
+  content: "";
+  position: absolute;
+  border: 5px solid transparent;
+  border-left-color: blue;
+  left: -15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@-webkit-keyframes shown {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes shown {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
